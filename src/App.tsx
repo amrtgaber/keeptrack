@@ -1,6 +1,7 @@
 import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
-import HomePage from './components/projects/home/HomePage';
+import HomePage from './components/home/HomePage';
+import ProjectPage from './components/projects/ProjectPage';
 import ProjectsPage from './components/projects/ProjectsPage';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
+          <Route path="/projects/:id" element={<ProjectPage />} />
         </Routes>
       </div>
     </BrowserRouter>
